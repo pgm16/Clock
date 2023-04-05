@@ -1,0 +1,23 @@
+<MyApp>:
+    label1: label1
+    button1: button1
+    button2: button2
+    BoxLayout:
+        size: root.size
+        Button:
+            id: button1
+            text: "Click to start the clock"
+            on_press:
+                # button1.text: "Clock is running"                  # doesn't work so moved to Properties, note of unnamed type
+                # button2.text: "Click to stop the clock"
+                root.start()
+        Button:
+            id: button2
+            text: "Clock is stopped"
+            on_press:
+                # button1.text: "Click to start the clock"
+                # button2.text: "Clock is stopped"
+                root.stop()
+        Label:
+            id: label1
+            text: "Clock time will be displayed here"
